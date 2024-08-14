@@ -1,0 +1,36 @@
+{
+  "name": "vue-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^1.7.3",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
+    "json-server": "^1.0.0-beta.1",
+    "vue": "^2.7.16",
+    "vue-router": "^3.6.5",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-plugin-router": "^5.0.8",
+    "@vue/cli-plugin-vuex": "^4.5.19",
+    "@vue/cli-service": "^5.0.8",
+    "@vue/eslint-config-airbnb": "^8.0.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.8.8",
+    "vue-template-compiler": "^0.1.0"
+  }
+}

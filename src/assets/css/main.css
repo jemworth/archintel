@@ -1,0 +1,507 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* ===================================================================== */
+/* ===================================================================== */
+/*  ArchIntel Theme                                                      */
+/*  Base on custom CSS                                                   */
+/* ===================================================================== */
+/* ===================================================================== */
+/*  $0 - Root - CSS Variables                                            */
+/*  $1 - HTML & Style Elements                                           */
+/*       $1.1 - Styles - Typography                                      */
+/*       $1.2 - HTML Elements - Headings                                 */
+/*       $1.3 - HTML Elements - Links                                    */
+/*       $1.4 - HTML Elements - Images                                   */
+/*       $1.5 - HTML Elements - Inputs and Selectors                     */
+/*       $1.6 - HTML Elements - Buttons                                  */
+/*       $1.7 - Styles - Text Colors                                     */
+/*       $1.8 - Styles - Background Colors                               */
+/*       $1.9 - Styles - Space                                           */
+/*       $1.10 - Styles - Border Radius                                  */
+/*       $1.11 - Styles - Border Size                                    */
+/*       $1.12 - Styles - Elevation/Shadows                              */
+/*       $1.13 - Styles - Flex Properties                                */
+/*       $1.14 - Styles - Container & Grid                               */
+/*       $1.15 - Styles - Others                                         */
+/*  $2 - Page Layout                                                     */
+/*       $2.1 - Page Layout - Header                                     */
+/*       $2.2 - Page Layout - Menu                                       */
+/*       $2.3 - Page Layout - Content                                    */
+/*       $2.4 - Page Layout - Footer                                     */
+/*  $4 - Patterns                                                        */
+/*       $4.1 - Pattern - Cards                                          */
+/*       $4.2 - Pattern - Icon List                                      */
+/*       $4.3 - Pattern - Table                                          */
+/*  $5 - Articles/Blog                                                   */
+/*  $6 - Pages                                                           */
+/*       $6.1 - Login                                                    */
+/* ===================================================================== */
+/* ===================================================================== */
+
+/* ===================================================================== */
+/*  $0 - Root - CSS Variables                                            */
+/* ===================================================================== */
+:root {
+    /* Default Colors */
+    --primary: #2196F3;
+    --primary-hover: #1976D2;
+    --tertiary: #03045E;
+    --secondary: #6c757d;
+    --success: #4BAB60;
+    --info: #00a0fa;
+    --warning: #FFD600;
+    --danger: #F50002;
+    --light: #BBDEFB;
+    --dark: #212121;
+    --dark-hover: #111;
+    --neutral-0: #fff;
+    --neutral-1: #f7f9fb;
+    --neutral-2: #eaedf1;
+    --neutral-3: #dbdedf;
+    --neutral-4: #a9abae;
+    --neutral-5: #7d808b;
+    --neutral-6: #4e5264;
+    --neutral-7: #333;
+
+    /* Typography */
+    --font-family: 'Roboto';
+    --line-height-base: 1.5;
+
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 26px;
+    --font-size-h4: 22px;
+    --font-size-h5: 20px;
+    --font-size-h6: 18px;
+
+    --font-size-base: 16px;
+    --font-size-s: 14px;
+    --font-size-xs: 12px; 
+    
+    /* Typography - Weight */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Spacing */
+    --space-auto: auto;
+    --space-none: 0;
+    --space-xxs: 5px;
+    --space-xs: 10px;
+    --space-sm: 15px;
+    --space-base: 20px;
+    --space-md: 25px;
+    --space-lg: 30px;
+    --space-xl: 35px;
+    --space-xll: 40px;
+
+    /* Border */
+    --border-none: none;
+    --border-sm: 1px;
+    --border-md: 2px;
+    --border-lg: 3px;
+    --border-xl: 4px;
+
+    /* Border Radius */
+    --border-radius-none: none;
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+    --border-radius-lg: 12px;
+    --border-radius-xl: 16px;
+
+    /* Elevation / Shadow */
+    --shadow-none: none;
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, .1);
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, .1);
+    --shadow-mg: 0 4px 6px rgba(0, 0, 0, .1);
+    --shadow-lg: 0 6px 8px rgba(0, 0, 0, .1);
+    --shadow-xl: 0 8px 10px rgba(0, 0, 0, .1);
+}
+
+/* ================================================================ */
+/*  $1 - HTML Elements                                              */
+/* ================================================================ */
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+}
+
+body {
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-light);
+    margin: var(--space-none);
+    color: var(--neutral-7);
+    line-height: var(--line-height-base);
+    -webkit-overflow-scrolling: touch;
+}
+
+a {
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+    border-bottom: 0;
+    text-decoration: underline;
+}
+
+:focus {
+    outline: 0;
+}
+
+.is--focusable :focus {
+    outline: var(--border-size-m) solid #A3DAFF;
+}
+
+input, 
+textarea, 
+select, 
+button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.25;
+    margin: 0;
+}
+
+[type="checkbox"], 
+[type="radio"] {
+    border: 0;
+    padding: 0;
+}
+
+[type="checkbox"]:not(.checkbox) {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type="radio"]:not(.radio-button) {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+  appearance: radio;
+}
+
+[type="number"]::-webkit-inner-spin-button, 
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+    outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button, 
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+}
+
+div[onclick] {
+    cursor: pointer;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+/* $1.1 - Styles - Typography & Size */
+@media screen and (min-width: 768px) {
+    body {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* $1.2 - Styles - Headings */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: var(--font-weight-regular)
+}
+h1, .h1 {
+    font-size: var(--font-size-h1);
+}
+h2, .h2 {
+    font-size: var(--font-size-h2);
+}
+h3, .h3 {
+    font-size: var(--font-size-h3);
+}
+h4, .h4 {
+    font-size: var(--font-size-h4);
+}
+h5, .h5 {
+    font-size: var(--font-size-h5);
+}
+h6, .h6 {
+    font-size: var(--font-size-h6);
+}
+.hr-backward {
+    position: relative;
+}
+.hr-backward::before {
+    content: '';
+    border-bottom: 1px solid var(--neutral-3);
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+}
+.hr-backward > * {
+    background: var(--neutral-0);
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+}
+
+/* $1.5 - Styles - Inputs and Selectors */
+
+/* $1.6 - Styles - Button */
+.btn {
+    padding: var(--space-sm) var(--space-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+    color: var(--neutral-7);
+    border: var(--border-none);
+    border-radius: var(--border-radius-md);
+    background-color: var(--bs-btn-bg);
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--neutral-0);
+}
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+.btn-dark {
+    background: var(--dark);
+    color: var(--neutral-0);
+}
+.btn-dark:hover {
+    background: var(--dark-hover);
+}
+
+/* $1.6 - Styles - Text Colors */
+.text-neutral-1 {
+    color: var(--neutral-1)
+}
+.text-neutral-2 {
+    color: var(--neutral-2)
+}
+.text-neutral-3 {
+    color: var(--neutral-3)
+}
+.text-neutral-4 {
+    color: var(--neutral-4)
+}
+.text-neutral-5 {
+    color: var(--neutral-5)
+}
+.text-neutral-6 {
+    color: var(--neutral-6)
+}
+.text-neutral-7 {
+    color: var(--neutral-7)
+}
+
+/* $1.8 - Styles - Background Colors */
+.bg-neutral-2 {
+    background: var(--neutral-2)
+}
+
+/* $1.9 - Spacing */
+/* Margin */
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+.mb-base {
+    margin-bottom: var(--space-base);
+}
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+/* Padding */
+.padding-xs {
+    padding: var(--space-xs);
+}
+
+/* $1.13 - Flex Properties */
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+   justify-content: center;
+}
+.gap-10 {
+    gap: 10px
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: calc(-.5 * var(--space-sm)) !important;
+    margin-left: calc(-.5 * var(--space-sm)) !important;
+}
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--space-sm)* .5) !important;
+    padding-left: calc(var(--space-sm)* .5) !important;
+}
+
+@media screen and (min-width: 768px){
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .row > * + * {
+        margin-top: var(--space-sm)
+    }
+}
+
+/* $1.14 - Container & Grid */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding-left: var(--space-base);
+    padding-right: var(--space-base);
+    margin-left: var(--space-auto);
+    margin-right: var(--space-auto);
+}
+.mw-450 {
+    max-width: 450px;
+}
+
+/* ================================================================ */
+/*  $2 - Pages Layout                                               */
+/* ================================================================ */
+.main-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* $2.1 - Page Layout - Header */
+
+/* $2.2 - Page Layout - Menu */
+.sidebar-container {
+    background-color: var(--primary);
+    transition: 0.5s;
+    min-width: 275px;
+    padding: var(--space-md) var(--space-base)
+}
+.sidebar-container .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--neutral-0);
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg)
+}
+.sidebar-container .head .logo {
+    max-height: var(--space-base);
+}
+.sidebar-container .head .site-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-light);
+}
+.sidebar-container .navbar-nav {
+    list-style: none;
+    padding: 0
+}
+.sidebar-container .navbar-nav a {
+    padding: var(--space-xs) var(--space-sm);
+    display: flex;
+    gap: var(--space-sm);
+    color: var(--neutral-0);
+    border-radius: var(--border-radius-md);
+    font-weight: var(--font-weight-regular);
+}
+.sidebar-container .navbar-nav a:hover,
+.sidebar-container .navbar-nav a.router-link-active {
+    background: #52b3ff;
+}
+.sidebar-container .navbar-nav .nav-item + .nav-item {
+    margin-top: var(--space-xxs)
+}
+.sidebar-container .navbar-nav a svg {
+    max-width: 20px;
+    max-height: 20px
+}
+
+
+@media screen and (min-width: 768px) {
+    .closebtn {
+        display: none;
+    }
+}
+@media screen and (max-width: 767px){
+    .sidebar-container {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+        width:0
+    }
+    .slideNav {
+        width: 275px;
+    }
+}
+
+/* $2.3 - Page Layout - Content */
+.content-container {
+    width: 100%;
+    transition: margin-left .5s;
+}
+.slideContent {
+    margin-left: 250px;
+}
+
+/* $2.4 - Page Layout - Footer */
+
+/* ================================================================ */
+/*  $6 - Pages                                                      */
+/* ================================================================ */
+
+/* $6.1 - Login */
+.login-page {
+    align-items: center;
+    background: var(--primary);
+    display: flex;
+    min-height: 100vh;
+}
+.login {
+    background: var(--neutral-0);
+    border-radius: var(--border-radius-sm);
+    box-shadow: var(--shadow-lg);
+    padding: var(--space-xl);
+}

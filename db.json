@@ -1,0 +1,110 @@
+{
+  "Users": [
+    {
+      "id": 1,
+      "firstname": "Jane",
+      "lastname": "Doe",
+      "type": "writer",
+      "email": "jdoe@awesome.com",
+      "date": "2021-04-03",
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "firstname": "Sarah",
+      "lastname": "Jane",
+      "type": "editor",
+      "email": "sjane@coabc.com",
+      "date": "2021-06-03",
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "firstname": "Tim",
+      "lastname": "Hane",
+      "type": "writer",
+      "email": "thane@coxyz.com",
+      "date": "2020-12-03",
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "firstname": "Miriam",
+      "lastname": "Doe",
+      "type": "editor",
+      "email": "mdoe@vidprod.com",
+      "date": "2020-07-05",
+      "status": "inactive"
+    },
+    {
+      "id": 5,
+      "firstname": "Jill",
+      "lastname": "Wade",
+      "type": "editor",
+      "email": "jwade@codewrit.com",
+      "date": "2020-04-03",
+      "status": "active"
+    }
+  ],
+  "Articles": [
+    {
+      "id": 1,
+      "title": "Lorem Ipsum",
+      "image": "Doe",
+      "link": "/",
+      "date": "2021-04-03",
+      "status": "edit",
+      "type": "writer",
+      "company": "ArchIntel"
+    },
+    {
+      "id": 2,
+      "title": "Lorem Ipsum",
+      "image": "Jane",
+      "link": "/",
+      "date": "2021-06-03",
+      "status": "published",
+      "type": "editor",
+      "company": "ArchIntel"
+    },
+    {
+      "id": 3,
+      "title": "Lorem Ipsum",
+      "image": "Hane",
+      "link": "/",
+      "date": "2020-12-03",
+      "status": "published",
+      "type": "writer",
+      "company": "ArchIntel"
+    },
+    {
+      "id": 4,
+      "title": "Lorem Ipsum",
+      "image": "Doe",
+      "link": "/",
+      "date": "2020-07-05",
+      "status": "published",
+      "type": "editor",
+      "company": "ArchIntel"
+    },
+    {
+      "id": 5,
+      "title": "Lorem Ipsum",
+      "image": "Wade",
+      "link": "/",
+      "date": "2020-04-03",
+      "status": "edit",
+      "type": "writer",
+      "company": "ArchIntel"
+    },
+    {
+      "id": "fe74",
+      "title": "Ann",
+      "image": "Mcintyre",
+      "link": "wuxufyb@mailinator.com",
+      "type": "Mcintyre Hart Inc",
+      "date": "1994-07-18",
+      "status": "active"
+    }
+  ]
+}
